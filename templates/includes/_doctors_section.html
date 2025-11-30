@@ -1,0 +1,32 @@
+<section id="doctors" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Наши сотрудники</h2>
+            <p class="lead text-muted">Профессиональная команда стоматологов</p>
+        </div>
+
+        <div class="row g-4">
+            {% for doctor in doctors %}
+            <div class="col-lg-6">
+                <div class="card doctor-card h-100 border-0 shadow-sm">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-4">
+                            {% if doctor.photo %}
+                                <img src="{{ doctor.photo.url }}" class="img-fluid rounded-start h-100 object-fit-cover" alt="{{ doctor.full_name }}">
+                            {% else %}
+                                <img src="/static/images/doctors/14.png" class="img-fluid rounded-start h-100 object-fit-cover" alt="Фото врача">
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{ doctor.full_name }}</h5>
+                                <p class="card-text">{{ doctor.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

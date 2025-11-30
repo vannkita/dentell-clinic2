@@ -1,0 +1,23 @@
+/* ======================== */
+/* MAIN STYLESHEET          */
+/* Импорт всех компонентов  */
+/* ======================== */
+
+@import url('components/_base.css');
+@import url('components/_navigation.css');
+@import url('components/_buttons.css');
+@import url('components/_cards.css');
+@import url('components/_modals.css');
+@import url('components/_forms.css');
+@import url('components/_gallery.css');
+@import url('components/_footer.css');
+@import url('components/_animations.css');
+@import url('components/_about.css');
+@import url('components/_services.css');
+@import url('components/_schedule.css');
+@import url('components/_contact.css');
+/* @import url('components/_icons.css'); */
+/* Общие утилиты */
+.hidden {
+  display: none !important;
+}

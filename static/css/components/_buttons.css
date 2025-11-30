@@ -1,0 +1,51 @@
+/* ======================== */
+/* BUTTON STYLES            */
+/* Стили для всех кнопок    */
+/* ======================== */
+
+.btn {
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .btn-light {
+    background-color: var(--light-text);
+    color: var(--primary-color);
+  }
+  
+  .btn-light:hover {
+    background-color: #f0f0f0;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Эффект волны для кнопок */
+  .btn-primary:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  .btn-primary:hover:after {
+    left: 100%;
+  }

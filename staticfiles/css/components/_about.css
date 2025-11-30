@@ -1,0 +1,152 @@
+/* ======================== */
+/* ABOUT SECTION STYLES     */
+/* Стили секции "О клинике" */
+/* ======================== */
+
+.about-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .about-shape-1 {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(13, 110, 253, 0.05);
+    border-radius: 50%;
+  }
+  
+  .about-shape-2 {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(13, 110, 253, 0.05);
+    border-radius: 50%;
+  }
+  
+  .about-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .about-title {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+  
+  .about-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+  
+  .about-lead {
+    color: var(--muted-text);
+  }
+  
+  .about-features {
+    margin-top: 2rem;
+  }
+  
+  .feature-box {
+    padding: 1.5rem;
+    height: 100%;
+  }
+
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Цвета для текста при наведении */
+.feature-box:hover h5 {
+  color: #0D4A54;
+}
+
+/* Стили для иконок в секции "О нас" */
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Стили для карточек услуг */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Цвета для текста при наведении */
+.feature-box:hover h5 {
+  color: #0D4A54;
+}
+
+.icon-primary {
+  color: #0D4A54 !important;
+}
+
+/* Зеленый цвет для иконок */
+.text-success {
+  color: #0D4A54 !important;
+}
+
+/* Hover-эффект для карточек услуг */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  border-color: #0D544F;
+  box-shadow: 0 5px 15px rgba(13, 84, 79, 0.2) !important;
+}
+
+.service-card:hover .card-title {
+  color: #0D544F;
+}
+
+/* Анимация иконок */
+.feature-icon {
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.1);
+  color: #0D4A54; /* Темнее при наведении */
+}

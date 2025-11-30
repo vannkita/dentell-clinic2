@@ -1,0 +1,103 @@
+/* ======================== */
+/* CARD STYLES              */
+/* Стили для карточек       */
+/* ======================== */
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    background-color: #fff;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Карточки услуг */
+  .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.4s ease;
+    z-index: 1;
+  }
+  
+  .service-card:hover::before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  
+  .service-card .card-body {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+  }
+  
+  .service-card:hover .card-title {
+    color: var(--accent-color);
+  }
+  
+  .service-card .card-text {
+    color: var(--muted-text);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+  
+  .service-card .price {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover .price {
+    transform: scale(1.05);
+  }
+  
+  /* Карточка фич */
+  .feature-box {
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .feature-icon {
+    color: var(--accent-color);
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }

@@ -1,0 +1,38 @@
+<section id="licenses" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Лицензии и сертификаты</h2>
+            <p class="lead text-muted">Официальные документы клиники</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            {% for license in licenses %}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="license-item text-center">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#licenseModal{{ license.id }}">
+                        <img src="{{ license.image.url }}" class="img-fluid rounded shadow-sm mb-3" alt="{{ license.title }}">
+                    </a>
+                    {% if license.title %}
+                    <p class="fw-bold mb-0">{{ license.title }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Модальное окно для просмотра -->
+            <div class="modal fade" id="licenseModal{{ license.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header text-white" style="background-color: #0D544F;">
+                            <h5 class="modal-title">{{ license.title }}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="{{ license.image.url }}" class="img-fluid" alt="{{ license.title }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

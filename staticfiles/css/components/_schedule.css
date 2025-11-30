@@ -1,0 +1,32 @@
+#schedule {
+    background-color: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#schedule .text-content {
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#schedule .lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+#schedule .btn-lg {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 10px rgba(13, 84, 79, 0.3);
+    transition: all 0.3s ease;
+}
+
+#schedule .btn-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(13, 84, 79, 0.4);
+}

@@ -1,0 +1,47 @@
+/* Стили для иконок в секции "О нас" */
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Цвета для текста при наведении */
+.feature-box:hover h5 {
+    color: #0D544F;
+}
+
+.icon-primary {
+    color: #0D544F !important;
+}
+
+/* Зеленый цвет для иконок */
+.text-success {
+    color: #0D544F !important;
+  }
+  
+  /* Hover-эффект для карточек услуг */
+  .service-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .service-card:hover {
+    border-color: #0D544F;
+    box-shadow: 0 5px 15px rgba(13, 84, 79, 0.2) !important;
+  }
+  
+  .service-card:hover .card-title {
+    color: #0D544F;
+  }
+  
+  /* Анимация иконок */
+  .feature-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-box:hover .feature-icon {
+    transform: scale(1.1);
+    color: #0a423e; /* Темнее при наведении */
+  }

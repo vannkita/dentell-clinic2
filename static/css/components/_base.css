@@ -1,0 +1,128 @@
+/* ======================== */
+/* BASE STYLES              */
+/* Основные глобальные стили*/
+/* ======================== */
+
+:root {
+    --primary-color: #0D4A54;
+    --secondary-color: #0D544F;
+    --accent-color: #0D4A54;
+    --light-bg: #f8f9fa;
+    --dark-text: #333;
+    --light-text: #fff;
+    --muted-text: #6c757d;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-hover: 0 10px 25px rgba(0,0,0,0.15);
+    --transition: all 0.3s ease;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: #fff;
+    padding-top: 70px; /* Для фиксированной навигации */
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding-top: 36px;
+    }
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Гарантируем видимость навигации */
+.navbar {
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Увеличиваем контраст при скролле */
+  .navbar.scrolled {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    background-color: #0D4A54 !important;
+  }
+  
+  /* Корректируем отступы контента */
+  body {
+    padding-top: 50px; /* Немного увеличим для надежности */
+  }
+  
+  section {
+    scroll-margin-top: 50px;
+  }
+
+  /* Добавим в конец style.css */
+.custom-toast {
+  animation: toastIn 0.3s forwards;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-success {
+  background-color: #28a745 !important;
+}
+
+.alert-error {
+  background-color: #dc3545 !important;
+}
+
+.alert-warning {
+  background-color: #ffc107 !important;
+  color: #333 !important;
+}
+
+.alert-info {
+  background-color: #0D4A54 !important;
+}
+
+.toast-message {
+  flex-grow: 1;
+}
+
+.icon-primary {
+  color: #0D4A54 !important;
+}

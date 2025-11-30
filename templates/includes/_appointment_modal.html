@@ -1,0 +1,49 @@
+<!-- Запись на прием - новое модальное окно -->
+<div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background-color: #0D544F;">
+          <h5 class="modal-title">
+            <i class="fas fa-calendar-alt me-2"></i>Запись на прием
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="appointmentForm" method="post" action="{% url 'create_appointment' %}">
+          {% csrf_token %}
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Имя</label>
+                <input type="text" name="first_name" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Фамилия</label>
+                <input type="text" name="last_name" class="form-control" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Телефон*</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    required
+                    autocomplete="tel"
+                  />
+                <div class="invalid-feedback" id="phoneError">
+                  Пожалуйста, введите 11-значный номер в формате: +7(XXX)XXX-XX-XX
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Комментарий (необязательно)</label>
+                <textarea name="comment" class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" class="btn text-white" style="background-color: #0D544F;">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
