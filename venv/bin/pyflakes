@@ -1,4 +1,4 @@
-#!/var/www/dentell-clinic/venv/bin/python3
+#!/Users/nikitav/Desktop/dentl/dentell-clinic2/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
